@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <section id="publications" class="section">
+    <div class="section-head">
+      <h1 class="eyebrow">Publications</h1>
+      {% if selected %}<span class="legend"><span class="legend-swatch"></span>Selected</span>{% endif %}
+    </div>
+    <p class="page-intro">{{ publications | length }} publication{% if publications | length != 1 %}s{% endif %}{% if selected %}, {{ selected | length }} selected{% endif %}. Newest first.</p>
+
+    {% for year, pubs in publications_by_year %}
+    <div class="year-group">
+      <h2 class="year">{{ year }}</h2>
+      {% for pub in pubs %}
+      <article class="pub pub-row{% if pub.selected %} is-selected{% endif %}">
+        <div class="pub-row-head">
+          <h3 class="pub-title">{{ pub.title }}</h3>
+          {% if pub.selected %}<span class="tag">Selected</span>{% endif %}
+        </div>
+        <p class="pub-authors">{{ pub.authors_html }} · <em>{{ pub.venue }}</em>{% if pub.note %} · <span class="pub-note">{{ pub.note }}</span>{% endif %}</p>
+        {% if pub.links %}
+        <div class="pub-links">
+          {% for label, href in pub.links.items() %}
+          <a href="{{ href }}">{{ label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </section>
+
+{% endblock %}

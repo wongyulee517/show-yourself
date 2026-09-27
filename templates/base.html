@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page_title %}{{ page_title }} · {% endif %}{{ profile.site_title or profile.name }}</title>
+  <meta name="description" content="{{ profile.site_description or profile.name }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>:root { --accent: {{ profile.accent or '#7A2E2E' }}; }</style>
+</head>
+<body>
+<div class="page" id="top">
+
+  <header class="site-header">
+    <a class="brand" href="index.html">{{ profile.name }}</a>
+    <nav class="site-nav" aria-label="Primary">
+      {% for item in nav %}
+      <a href="{{ item.href }}"{% if item.href == current_page %} class="is-current" aria-current="page"{% elif item.accent %} class="accent"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+
+  <div class="columns">
+
+    <aside class="sidebar">
+      <div class="identity">
+        {% if profile.photo %}
+        <img class="portrait" src="{{ profile.photo }}" alt="{{ profile.photo_alt or profile.name }}">
+        {% else %}
+        <div class="portrait portrait-placeholder" role="img" aria-label="Portrait placeholder">Portrait photo</div>
+        {% endif %}
+        <div class="identity-text">
+          <p class="name">{{ profile.name }}</p>
+          {% if profile.affiliation %}
+          <p class="affiliation">{% for line in profile.affiliation %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if links %}
+      <div class="links">
+        <h2 class="eyebrow">Links</h2>
+        <ul class="link-list">
+          {% for link in links %}
+          <li><a href="{{ link.href }}"{% if link.href.startswith('http') %} target="_blank" rel="noopener"{% endif %}>{{ icon(link.icon) }}<span>{{ link.label }}</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </aside>
+
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <span>© {{ year }} {{ profile.name }}</span>
+    <span>
+      {% if profile.footer and profile.footer.source_url %}Source on <a href="{{ profile.footer.source_url }}">GitHub</a>{% endif %}
+      {% if profile.footer and profile.footer.deployed_with %} · Deployed with {{ profile.footer.deployed_with }}{% endif %}
+    </span>
+  </footer>
+</div>
+</body>
+</html>

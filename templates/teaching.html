@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <section id="teaching" class="section">
+    <h1 class="eyebrow">Teaching</h1>
+    <ul class="timeline">
+      {% for item in teaching %}
+      <li class="timeline-item">
+        <span class="timeline-period">{{ item.term }}</span>
+        <div class="timeline-body">
+          <span class="timeline-org">{% if item.href %}<a href="{{ item.href }}">{{ item.course }}</a>{% else %}{{ item.course }}{% endif %}</span>
+          {% if item.role %}<span class="timeline-role">{{ item.role }}{% if item.note %} · {{ item.note }}{% endif %}</span>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+{% endblock %}

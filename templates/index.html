@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+  {% if profile.about %}
+  <section id="about" class="section">
+    <h1 class="eyebrow">About</h1>
+    {% for paragraph in profile.about %}
+    <p class="prose">{{ paragraph | safe }}</p>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if career %}
+  <section id="career" class="section">
+    <h2 class="eyebrow">Career</h2>
+    <ul class="timeline">
+      {% for item in career %}
+      <li class="timeline-item">
+        <span class="timeline-period">{{ item.period }}</span>
+        <div class="timeline-body">
+          <span class="timeline-org">{% if item.href %}<a href="{{ item.href }}">{{ item.org }}</a>{% else %}{{ item.org }}{% endif %}</span>
+          {% if item.role %}<span class="timeline-role">{{ item.role }}</span>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if highlights %}
+  <section id="selected" class="section">
+    <div class="section-head">
+      <h2 class="eyebrow">{% if selected %}Selected Publications{% else %}Recent Publications{% endif %}</h2>
+      <a class="more" href="publications.html">All publications ({{ publications | length }}) →</a>
+    </div>
+    {% for pub in highlights %}
+    <article class="pub pub-card">
+      <h3 class="pub-title">{{ pub.title }}</h3>
+      <p class="pub-authors">{{ pub.authors_html }}</p>
+      <p class="pub-venue"><em>{{ pub.venue }}</em>{% if pub.year %}, {{ pub.year }}{% endif %}{% if pub.note %} · <span class="pub-note">{{ pub.note }}</span>{% endif %}</p>
+      {% if pub.links %}
+      <div class="pub-buttons">
+        {% for label, href in pub.links.items() %}
+        <a class="button" href="{{ href }}">{{ label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+{% endblock %}

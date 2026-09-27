@@ -5,20 +5,30 @@
 # role   : 역할 · 부가 설명 (회색으로 표시)
 # href   : (선택) 기관명에 걸 링크
 
-- period: "[YYYY] – Present"
-  org: "[Research Lab], [University]"
-  role: "Ph.D. Student · advised by [Advisor]"
+# - period: "[YYYY] – Present"
+#   org: "[Research Lab], [University]"
+#   role: "Ph.D. Student · advised by [Advisor]"
+#   href: ""
+
+- period: "2025.01 ~ current"
+  org: "Kakao"
+  role: "Machine Learning Engineer / Data Scientist | Ads Recommendation"
   href: ""
 
-- period: "[Summer YYYY]"
-  org: "[Company]"
-  role: "Research Intern · [Team name], [City]"
+- period: "2022.12 ~ 2024.12"
+  org: "Kakao"
+  role: "Software Engineer"
   href: ""
 
-- period: "[YYYY] – [YYYY]"
-  org: "[Lab name], [University]"
-  role: "Undergraduate Researcher · [short note on the project]"
+- period: "2022 Summer"
+  org: "Kakao"
+  role: "Software Engineer Intern"
+  href: ""
 
-- period: "[YYYY] – [YYYY]"
-  org: "[University]"
-  role: "B.S. in [Major]"
+# - period: "[YYYY] – [YYYY]"
+#   org: "[Lab name], [University]"
+#   role: "Undergraduate Researcher · [short note on the project]"
+
+- period: "~ 2023"
+  org: "Sungkyunkwan University"
+  role: "B.S. in Computer Engineering and Software"

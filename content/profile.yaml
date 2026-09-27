@@ -1,20 +1,24 @@
 # 기본 프로필 정보. 대괄호 안의 값을 본인 정보로 바꾸세요.
 
-name: "[Your Name]"
+name: "Wongyu Lee"
 
 # 이름 아래에 줄바꿈으로 표시되는 소속 정보 (원하는 만큼 추가/삭제)
+# affiliation:
+#   - "[Ph.D. Candidate]"
+#   - "[Department of ___]"
+#   - "[University]"
+
 affiliation:
-  - "[Ph.D. Candidate]"
-  - "[Department of ___]"
-  - "[University]"
+  - "Independent Researcher"
+  - "Kakao"
 
 # 논문 저자 목록에서 굵게 표시할 이름들. 영문/한글 표기 등 여러 개 가능.
 author_aliases:
-  - "[Your Name]"
+  - "Wongyu Lee"
 
 # 사진 파일: static/ 폴더에 넣고 파일명을 적으세요. 비워두면 자리표시자가 표시됩니다.
-photo: ""
-photo_alt: "Portrait of [Your Name]"
+photo: "image_1.png"
+photo_alt: "Portrait of Wongyu Lee"
 
 # About 섹션. 문단마다 하나의 항목. 간단한 HTML(<a>, <em>)을 쓸 수 있습니다.
 about:
@@ -46,12 +50,12 @@ recent_count: 3
 
 # 푸터
 footer:
-  source_url: "https://github.com/[user]/[repo]"
+  source_url: "https://github.com/wongyulee517/show-yourself"
   deployed_with: "GitHub Pages"
 
 # 브라우저 탭 제목과 메타 설명
-site_title: "[Your Name]"
-site_description: "Academic homepage of [Your Name]"
+site_title: "Wongyu Lee"
+site_description: "Personal Profile for Wongyu Lee"
 
 # 테마. 아래 중 하나를 고르세요. (미리보기: python3 build.py --serve --theme teal)
 #   oxblood : 흰 배경 + 따뜻한 회색 + 짙은 붉은 포인트 (기본)

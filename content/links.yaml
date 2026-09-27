@@ -8,21 +8,21 @@
 # 이메일은 href 에 "mailto:you@university.edu" 형태로 적습니다.
 
 - label: "LinkedIn"
-  href: "https://www.linkedin.com/in/[handle]"
+  href: "https://www.linkedin.com/in/wongyu-lee"
   icon: linkedin
 
-- label: "Curriculum Vitae (PDF)"
-  href: "cv.pdf"
-  icon: cv
+# - label: "Curriculum Vitae (PDF)"
+#   href: "cv.pdf"
+#   icon: cv
 
-- label: "Google Scholar"
-  href: "https://scholar.google.com/citations?user=[id]"
-  icon: scholar
+# - label: "Google Scholar"
+#   href: "https://scholar.google.com/citations?user=[id]"
+#   icon: scholar
 
 - label: "GitHub"
-  href: "https://github.com/[handle]"
+  href: "https://github.com/wongyulee517"
   icon: github
 
-- label: "[you@university.edu]"
-  href: "mailto:[you@university.edu]"
+- label: "wongyulee517@gmail.com"
+  href: "mailto:[wongyulee517@gmail.com]"
   icon: email

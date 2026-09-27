@@ -10,45 +10,45 @@
 # links    : 버튼으로 표시될 링크들. 키가 버튼 라벨이 됩니다. (PDF, Code, BibTeX, Slides, Poster, Video, arXiv ...)
 # note     : (선택) 수상 내역 등 한 줄 메모. 예: "Oral presentation", "Best Paper Award"
 
-- title: "[Paper title 1: a descriptive title of the work]"
-  authors: ["[Your Name]", "[Coauthor A]", "[Coauthor B]"]
-  venue: "[Conference / Journal]"
-  year: 2026
-  selected: true
-  links:
-    PDF: "#"
-    Code: "#"
-    BibTeX: "#"
+# - title: "[Paper title 1: a descriptive title of the work]"
+#   authors: ["[Your Name]", "[Coauthor A]", "[Coauthor B]"]
+#   venue: "[Conference / Journal]"
+#   year: 2026
+#   selected: true
+#   links:
+#     PDF: "#"
+#     Code: "#"
+#     BibTeX: "#"
 
-- title: "[Paper title 2]"
-  authors: ["[Coauthor D]", "[Your Name]"]
-  venue: "[Workshop]"
-  year: 2026
-  links:
-    PDF: "#"
-    BibTeX: "#"
+# - title: "[Paper title 2]"
+#   authors: ["[Coauthor D]", "[Your Name]"]
+#   venue: "[Workshop]"
+#   year: 2026
+#   links:
+#     PDF: "#"
+#     BibTeX: "#"
 
-- title: "[Paper title 3]"
-  authors: ["[Coauthor A]", "[Your Name]", "[Coauthor C]"]
-  venue: "[Conference / Journal]"
-  year: 2025
-  selected: true
-  note: "[Oral presentation]"
-  links:
-    PDF: "#"
-    BibTeX: "#"
+# - title: "[Paper title 3]"
+#   authors: ["[Coauthor A]", "[Your Name]", "[Coauthor C]"]
+#   venue: "[Conference / Journal]"
+#   year: 2025
+#   selected: true
+#   note: "[Oral presentation]"
+#   links:
+#     PDF: "#"
+#     BibTeX: "#"
 
-- title: "[Paper title 4]"
-  authors: ["[Your Name]", "[Coauthor E]"]
-  venue: "[Preprint]"
-  year: 2025
-  links:
-    PDF: "#"
-    Code: "#"
+# - title: "[Paper title 4]"
+#   authors: ["[Your Name]", "[Coauthor E]"]
+#   venue: "[Preprint]"
+#   year: 2025
+#   links:
+#     PDF: "#"
+#     Code: "#"
 
-- title: "[Paper title 5]"
-  authors: ["[Coauthor F]", "[Coauthor G]", "[Your Name]"]
-  venue: "[Conference / Journal]"
-  year: 2024
-  links:
-    PDF: "#"
+# - title: "[Paper title 5]"
+#   authors: ["[Coauthor F]", "[Coauthor G]", "[Your Name]"]
+#   venue: "[Conference / Journal]"
+#   year: 2024
+#   links:
+#     PDF: "#"

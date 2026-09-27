@@ -5,12 +5,12 @@
 # course: 과목명
 # href  : (선택) 과목 페이지 링크
 
-- term: "[Term YYYY]"
-  role: "Teaching Assistant"
-  course: "[Course code · Course name]"
-  href: ""
+# - term: "[Term YYYY]"
+#   role: "Teaching Assistant"
+#   course: "[Course code · Course name]"
+#   href: ""
 
-- term: "[Term YYYY]"
-  role: "Teaching Assistant"
-  course: "[Course code · Course name]"
-  href: ""
+# - term: "[Term YYYY]"
+#   role: "Teaching Assistant"
+#   course: "[Course code · Course name]"
+#   href: ""

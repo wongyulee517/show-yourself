@@ -9,7 +9,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [wonguylee]
+    branches: [wongyulee]
   workflow_dispatch:
 
 permissions:

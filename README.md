@@ -88,4 +88,16 @@ build.py       YAML + 템플릿 → dist/
 dist/          빌드 결과 (git에 올리지 않음)
 ```
 
-배포(GitHub Pages)는 추후 GitHub Actions로 `build.py`를 실행해 `dist/`를 올리는 방식으로 붙일 예정입니다.
+## 배포 (GitHub Pages)
+
+`main`은 뼈대만 유지하고, 본인 내용은 별도 브랜치에 채워서 배포합니다.
+
+1. 개인 브랜치를 만들고 `content/`와 `static/`(사진, CV)을 채웁니다.
+2. `.github/workflows/deploy.yml`의 `branches:` 에 그 브랜치 이름을 적습니다.
+3. 저장소 **Settings → Pages → Build and deployment → Source** 를 **GitHub Actions** 로 한 번만 바꿉니다.
+4. 개인 브랜치에 push하면 Actions가 `build.py`를 실행해 `dist/`를 배포합니다.
+   주소는 `https://<user>.github.io/<repo>/` 입니다.
+
+템플릿을 고친 뒤에는 `main`에 커밋하고 개인 브랜치에서 `git merge main`으로 가져옵니다.
+내용 파일(`content/`, `static/`)과 코드 파일이 분리되어 있어 충돌이 거의 나지 않습니다.
+모든 링크가 상대 경로라서 하위 경로(`/<repo>/`)에서도 별도 설정 없이 동작합니다.

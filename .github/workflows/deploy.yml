@@ -27,11 +27,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Enables Pages (source: GitHub Actions) on first run if it is not yet enabled.
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

@@ -53,5 +53,16 @@ footer:
 site_title: "[Your Name]"
 site_description: "Academic homepage of [Your Name]"
 
-# 포인트 색 (링크, Selected 태그). 예: "#7A2E2E" 옥스블러드, "#1F5F5B" 틸, "#3B4C8A" 네이비
-accent: "#7A2E2E"
+# 테마. 아래 중 하나를 고르세요. (미리보기: python3 build.py --serve --theme teal)
+#   oxblood : 흰 배경 + 따뜻한 회색 + 짙은 붉은 포인트 (기본)
+#   teal    : 흰 배경 + 차가운 회색 + 딥 틸 포인트
+#   indigo  : 흰 배경 + 푸른 회색 + 인디고 포인트
+#   ochre   : 종이색 배경 + 황토 포인트
+#   slate   : 거의 무채색, 슬레이트 블루 포인트
+#   dark    : 어두운 배경 + 앰버 포인트
+theme: "oxblood"
+
+# 테마의 개별 색을 덮어쓰고 싶을 때만 적습니다. 가능한 키:
+#   bg, ink, body, muted, rule, tint, tint_border, button_border, placeholder, accent, on_accent
+# colors:
+#   accent: "#1F5F5B"

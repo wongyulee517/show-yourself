@@ -19,6 +19,8 @@ import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup, escape
 
+from themes import THEMES, resolve_palette
+
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
 TEMPLATES = ROOT / "templates"
@@ -104,8 +106,9 @@ def build_nav(profile: dict, show_teaching: bool) -> list[dict]:
     return nav
 
 
-def build(out_dir: Path) -> Path:
+def build(out_dir: Path, theme: str | None = None) -> Path:
     profile = load_yaml("profile", {})
+    palette = resolve_palette(profile, theme)
     links = load_yaml("links", [])
     career = load_yaml("career", [])
     publications = load_yaml("publications", [])
@@ -136,6 +139,7 @@ def build(out_dir: Path) -> Path:
 
     context = dict(
         profile=profile,
+        palette=palette,
         links=links,
         career=career,
         publications=publications,
@@ -185,9 +189,13 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT, help="output directory (default: dist/)")
     parser.add_argument("--serve", action="store_true", help="build, then serve the output locally")
     parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument(
+        "--theme", choices=sorted(THEMES), default=None,
+        help="preview with this theme instead of the one in profile.yaml",
+    )
     args = parser.parse_args(argv)
 
-    out = build(args.out)
+    out = build(args.out, theme=args.theme)
     print(f"Built {sorted(p.name for p in out.glob('*.html'))} in {out}")
     if args.serve:
         serve(out, args.port)

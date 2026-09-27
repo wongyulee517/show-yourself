@@ -21,7 +21,7 @@ python3 -m venv .venv
 
 | 파일 | 내용 |
 | --- | --- |
-| `content/profile.yaml` | 이름, 소속, 사진, About 문단, 상단 탭 이름, 섹션 on/off, 포인트 색 |
+| `content/profile.yaml` | 이름, 소속, 사진, About 문단, 상단 탭 이름, 섹션 on/off, 테마 |
 | `content/links.yaml` | 사이드바 링크 목록 (LinkedIn, CV, Scholar, GitHub, 이메일 등). 한 항목이 한 줄 |
 | `content/career.yaml` | 거쳐온 회사 · 랩실 · 학교 (최신이 위) |
 | `content/publications.yaml` | 모든 논문. 홈에는 `selected: true`인 논문만, Publications 페이지에는 전체가 표시 |
@@ -71,6 +71,31 @@ python3 -m venv .venv
 연도별 정렬은 자동이고, 같은 연도 안에서는 파일에 적은 순서를 따릅니다.
 `selected`가 하나도 없으면 홈에는 최신 논문 `recent_count`개가 대신 표시됩니다.
 
+### 테마 고르기
+
+`content/profile.yaml`의 `theme` 한 줄로 색 조합을 바꿉니다.
+
+| 이름 | 느낌 |
+| --- | --- |
+| `oxblood` | 흰 배경, 따뜻한 회색, 짙은 붉은 포인트 (기본) |
+| `teal` | 흰 배경, 차가운 회색, 딥 틸 포인트 |
+| `indigo` | 흰 배경, 푸른 회색, 인디고 포인트 |
+| `ochre` | 종이색 배경, 황토 포인트 |
+| `slate` | 거의 무채색, 슬레이트 블루 포인트 |
+| `dark` | 어두운 배경, 앰버 포인트 |
+
+빌드하지 않고 비교해 보려면 `python3 build.py --serve --theme teal` 처럼 `--theme`으로 미리볼 수 있습니다.
+특정 색만 바꾸고 싶으면 `colors:` 아래에 토큰 이름으로 덮어씁니다.
+
+```yaml
+theme: "teal"
+colors:
+  accent: "#176B65"
+```
+
+토큰: `bg`, `ink`, `body`, `muted`, `rule`, `tint`, `tint_border`, `button_border`, `placeholder`, `accent`, `on_accent`.
+새 테마를 추가하려면 `themes.py`의 `THEMES`에 같은 키를 가진 항목을 하나 더 넣으면 됩니다.
+
 ### 사진과 CV 파일
 
 `static/` 폴더에 넣은 파일은 그대로 사이트 루트에 복사됩니다.
@@ -85,6 +110,7 @@ content/       ← 여기만 고치면 됩니다
 templates/     base.html(공통 뼈대) + index / publications / teaching (Jinja2)
 static/        style.css, 사진, PDF 등 그대로 복사되는 파일
 build.py       YAML + 템플릿 → dist/
+themes.py      내장 색 테마 정의
 dist/          빌드 결과 (git에 올리지 않음)
 ```
 

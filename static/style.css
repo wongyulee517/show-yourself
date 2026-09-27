@@ -1,7 +1,11 @@
 /* Classic Scholar — academic profile theme */
 
 :root {
-  --accent: #7A2E2E;           /* overridden inline from content/profile.yaml */
+  /* Palette tokens. These are the "oxblood" defaults; templates/base.html
+     overrides them inline from the theme chosen in content/profile.yaml. */
+  --accent: #7A2E2E;
+  --on-accent: #FFFFFF;
+  --scheme: light;
   --bg: #FFFFFF;
   --ink: #1C1A17;
   --body: #4A443A;
@@ -21,7 +25,7 @@
 
 * { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; color-scheme: var(--scheme); }
 
 body {
   margin: 0;
@@ -252,7 +256,7 @@ ul { padding: 0; list-style: none; }
   border: 1px solid var(--button-border);
   border-radius: 4px;
   color: var(--ink);
-  background: #FFFFFF;
+  background: var(--bg);
 }
 
 .button:hover { text-decoration: none; border-color: var(--ink); }
@@ -313,7 +317,7 @@ ul { padding: 0; list-style: none; }
   padding: 3px 8px;
   border-radius: 3px;
   background: var(--accent);
-  color: #FFFFFF;
+  color: var(--on-accent);
 }
 
 .pub-links {

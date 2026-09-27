@@ -1,0 +1,16 @@
+# 강의 / 조교 경력. 비워두면 (빈 목록 []) Teaching 섹션과 내비 항목이 숨겨집니다.
+#
+# term  : 왼쪽 열에 표시되는 학기
+# role  : 역할 (Teaching Assistant, Instructor ...)
+# course: 과목명
+# href  : (선택) 과목 페이지 링크
+
+- term: "[Term YYYY]"
+  role: "Teaching Assistant"
+  course: "[Course code · Course name]"
+  href: ""
+
+- term: "[Term YYYY]"
+  role: "Teaching Assistant"
+  course: "[Course code · Course name]"
+  href: ""

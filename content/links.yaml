@@ -1,0 +1,28 @@
+# 사이드바 링크 목록. 한 줄이 사이드바 한 줄입니다.
+# 순서를 바꾸거나 항목을 지우거나 새로 추가하면 그대로 반영됩니다.
+#
+# icon 값으로 쓸 수 있는 이름:
+#   linkedin, cv, scholar, github, email, orcid, twitter, bluesky,
+#   website, semantic-scholar, dblp, youtube, link (기본값)
+#
+# 이메일은 href 에 "mailto:you@university.edu" 형태로 적습니다.
+
+- label: "LinkedIn"
+  href: "https://www.linkedin.com/in/[handle]"
+  icon: linkedin
+
+- label: "Curriculum Vitae (PDF)"
+  href: "cv.pdf"
+  icon: cv
+
+- label: "Google Scholar"
+  href: "https://scholar.google.com/citations?user=[id]"
+  icon: scholar
+
+- label: "GitHub"
+  href: "https://github.com/[handle]"
+  icon: github
+
+- label: "[you@university.edu]"
+  href: "mailto:[you@university.edu]"
+  icon: email

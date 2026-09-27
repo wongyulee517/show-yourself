@@ -1,0 +1,57 @@
+# 기본 프로필 정보. 대괄호 안의 값을 본인 정보로 바꾸세요.
+
+name: "[Your Name]"
+
+# 이름 아래에 줄바꿈으로 표시되는 소속 정보 (원하는 만큼 추가/삭제)
+affiliation:
+  - "[Ph.D. Candidate]"
+  - "[Department of ___]"
+  - "[University]"
+
+# 논문 저자 목록에서 굵게 표시할 이름들. 영문/한글 표기 등 여러 개 가능.
+author_aliases:
+  - "[Your Name]"
+
+# 사진 파일: static/ 폴더에 넣고 파일명을 적으세요. 비워두면 자리표시자가 표시됩니다.
+photo: ""
+photo_alt: "Portrait of [Your Name]"
+
+# About 섹션. 문단마다 하나의 항목. 간단한 HTML(<a>, <em>)을 쓸 수 있습니다.
+about:
+  - >-
+    I am a [position] at [University], advised by [Advisor]. My research focuses on
+    [research area 1] and [research area 2], with a particular interest in
+    [specific problem]. Previously, I received my [degree] from [University] in [year].
+  - >-
+    I am currently looking for [collaborators / postdoc positions / students].
+    Feel free to reach out.
+
+# 상단 탭. About(홈)과 Publications 는 항상 있고, Teaching 은 아래 sections 에서 켜고 끕니다.
+# 탭 이름을 바꾸고 싶으면 nav_labels 를 수정하세요.
+nav_labels:
+  home: "About"
+  publications: "Publications"
+  teaching: "Teaching"
+
+# 탭 오른쪽에 덧붙일 외부 링크 (CV 등). accent: true 면 포인트 색으로 표시.
+nav_extra:
+  - { label: "CV", href: "cv.pdf", accent: true }
+
+# 선택 섹션. false 로 바꾸면 해당 페이지와 탭이 함께 사라집니다.
+sections:
+  teaching: true
+
+# selected 로 표시한 논문이 하나도 없을 때 홈에 보여줄 최신 논문 개수
+recent_count: 3
+
+# 푸터
+footer:
+  source_url: "https://github.com/[user]/[repo]"
+  deployed_with: "GitHub Pages"
+
+# 브라우저 탭 제목과 메타 설명
+site_title: "[Your Name]"
+site_description: "Academic homepage of [Your Name]"
+
+# 포인트 색 (링크, Selected 태그). 예: "#7A2E2E" 옥스블러드, "#1F5F5B" 틸, "#3B4C8A" 네이비
+accent: "#7A2E2E"

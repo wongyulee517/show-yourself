@@ -1,0 +1,24 @@
+# 거쳐온 회사 / 랩실 / 학교. 위에서부터 순서대로 표시됩니다 (최신이 위).
+#
+# period : 왼쪽 열에 표시되는 기간
+# org    : 기관명 (굵게 표시)
+# role   : 역할 · 부가 설명 (회색으로 표시)
+# href   : (선택) 기관명에 걸 링크
+
+- period: "[YYYY] – Present"
+  org: "[Research Lab], [University]"
+  role: "Ph.D. Student · advised by [Advisor]"
+  href: ""
+
+- period: "[Summer YYYY]"
+  org: "[Company]"
+  role: "Research Intern · [Team name], [City]"
+  href: ""
+
+- period: "[YYYY] – [YYYY]"
+  org: "[Lab name], [University]"
+  role: "Undergraduate Researcher · [short note on the project]"
+
+- period: "[YYYY] – [YYYY]"
+  org: "[University]"
+  role: "B.S. in [Major]"
